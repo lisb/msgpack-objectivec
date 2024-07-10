@@ -7,6 +7,7 @@
 //
 
 #import "MessagePackParser+Streaming.h"
+#include "msgpack_src/msgpack.h"
 
 static const int kUnpackerBufferSize = 1024;
 
@@ -16,6 +17,8 @@ static const int kUnpackerBufferSize = 1024;
 @end
 
 @implementation MessagePackParser (Streaming)
+
+msgpack_unpacker unpacker;
 
 - (id)init {
     return [self initWithBufferSize:kUnpackerBufferSize];

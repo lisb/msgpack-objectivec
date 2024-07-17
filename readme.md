@@ -23,6 +23,30 @@ Packing Usage
     NSData* packed = [someArray messagePack];
     NSData* packed = [someDictionary messagePack];
 
+Installation
+----
+
+### SwiftPM
+
+Add the `msgpack` as a dependency:
+
+```swift
+let package = Package(
+    // name, platforms, products, etc.
+    dependencies: [
+        // other dependencies
+        .package(url: "https://github.com/lisb/msgpack-objectivec", from: "1.1.0"),
+    ],
+    targets: [
+        .executableTarget(name: "<executable-target-name>", dependencies: [
+            // other dependencies
+                .product(name: "msgpack", package: "msgpack-objectivec"),
+        ]),
+        // other targets
+    ]
+)
+```
+
 Authors
 -------
 

@@ -7,7 +7,7 @@
 //
 
 #import "MessagePackParser.h"
-#include "msgpack_src/msgpack.h"
+@import msgpackc;
 
 @implementation MessagePackParser
 

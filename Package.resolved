@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "msgpack-c",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nnabeyang/msgpack-c",
+      "state" : {
+        "revision" : "4d225cdc08a6d527c190bcf57d12a8e4e8034043",
+        "version" : "0.5.7"
+      }
+    }
+  ],
+  "version" : 2
+}

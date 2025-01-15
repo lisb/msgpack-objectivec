@@ -7,7 +7,7 @@
 //
 
 #import "MessagePackParser+Streaming.h"
-#include "msgpack_src/msgpack.h"
+@import msgpackc;
 
 static const int kUnpackerBufferSize = 1024;
 

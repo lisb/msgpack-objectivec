@@ -14,10 +14,15 @@ let package = Package(
             targets: ["msgpack"]
         )
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/nnabeyang/msgpack-c", exact: "0.5.7")
+    ],
     targets: [
         .target(
             name: "msgpack",
+            dependencies: [
+                .product(name: "msgpackc", package: "msgpack-c")
+            ],
             path: ".",
             exclude: [
                 "readme.md",
@@ -36,8 +41,7 @@ let package = Package(
                 "NSData+MessagePack.h",
                 "NSData+MessagePack.m",
                 "NSDictionary+MessagePack.h",
-                "NSDictionary+MessagePack.m",
-                "msgpack_src"
+                "NSDictionary+MessagePack.m"
             ],
             publicHeadersPath: "include",
             cxxSettings: [
